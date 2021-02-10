@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<title>Listage screen</title>
+	<h:outputStylesheet library="default" name="css/form.css" />
+</h:head>
+
+<h:body>
+	<h1>Page de recherche des jeux vidéos</h1>
+
+	<h:form>
+		<h3 style="margin-top: 0"></h3>
+		<fieldset>
+
+			<h:messages globalOnly="true" redisplay="false" />
+			<h:commandButton value="Retour menu" action="menu.xhtml"
+				styleClass="sansLabel" />
+			<br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false" />
+			<h:commandButton value="Lancer listage"
+				action="#{Saisie.listageJeuxVideos}"
+				styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false" />
+			<h:commandButton value="Remise à vide" action="#{Saisie.reset}"
+				styleClass="sansLabel" />
+
+		</fieldset>
+
+	</h:form>
+</h:body>
+
+</html>

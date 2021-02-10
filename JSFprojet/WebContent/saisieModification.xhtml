@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<title>update screen</title>
+	<h:outputStylesheet library="default" name="css/form.css" />
+</h:head>
+
+<h:body>
+	<h1>Page de mise à jour</h1>
+
+	<h:form>
+		<h3 style="margin-top: 0">laissez à vide les champs à ne pas
+			modifier</h3>
+		<fieldset>
+
+			<h:outputLabel for="id">Id <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="id" value="#{Saisie.id}" type="text" required="true"
+				maxlength="7" />
+			<h:message for="id" styleClass="errorBlock" />
+			<br />
+
+			<h:outputLabel for="name">Nom <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="name" value="#{Saisie.nom}" type="text"
+				required="false" maxlength="20" />
+			<h:message for="name" styleClass="errorBlock" />
+			<br />
+
+			<h:outputLabel for="genre">Genre <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="genre" value="#{Saisie.genre}" type="text"
+				required="false" maxlength="20" />
+			<h:message for="genre" styleClass="errorBlock" />
+			<br />
+
+			<h:outputLabel for="price">Prix <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="price" value="#{Saisie.prix}" type="text"
+				required="false" maxlength="8" />
+			<h:message for="price" styleClass="errorBlock" />
+			<br />
+
+			<h:outputLabel for="day">Jour <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="day" value="#{Saisie.jour}" type="text"
+				required="false" maxlength="2" />
+			<h:message for="day" styleClass="errorBlock" />
+			<br />
+
+			<h:outputLabel for="month">Mois <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="month" value="#{Saisie.mois}" type="text"
+				required="false" maxlength="2" />
+			<h:message for="month" styleClass="errorBlock" />
+			<br />
+
+			<h:outputLabel for="year">Annee <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="year" value="#{Saisie.annee}" type="text"
+				required="false" maxlength="4" />
+			<h:message for="year" styleClass="errorBlock" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false"/>
+			<h:commandButton value="modification" action="#{Saisie.modification}"
+				styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false"/>
+			<h:commandButton value="Retour menu" action="menu.xhtml"
+				styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false" />
+			<h:commandButton value="Remise à vide" action="#{Saisie.reset}"
+				styleClass="sansLabel" />
+		</fieldset>
+
+	</h:form>
+</h:body>
+
+</html>

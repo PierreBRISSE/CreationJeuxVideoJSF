@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<title>menu screen</title>
+	<h:outputStylesheet library="default" name="css/form.css" />
+</h:head>
+
+<h:body>
+	<h1>Menu</h1>
+
+	<h:form>
+		<h3 style="margin-top: 0">Choisissez :</h3>
+		<fieldset>
+
+			<h:messages globalOnly="true" infoClass="info" />
+			<h:commandButton value="Recherche par nom"
+				action="saisieRechercheNom.xhtml" styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" />
+			<h:commandButton value="Recherche des jeux vidéos"
+				action="listageJeuxVideos.xhtml" styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" />
+			<h:commandButton value="Création" action="saisieCreation.xhtml"
+				styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" />
+			<h:commandButton value="Modifier jeux vidéo"
+				action="saisieModification.xhtml" styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" />
+			<h:commandButton value="Supprimer jeux vidéo"
+				action="saisieSuppression.xhtml" styleClass="sansLabel" />
+			<br /> <br />
+
+		</fieldset>
+
+	</h:form>
+</h:body>
+
+</html>

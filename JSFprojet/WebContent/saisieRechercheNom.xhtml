@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<title>Creation screen</title>
+	<h:outputStylesheet library="default" name="css/form.css" />
+</h:head>
+
+<h:body>
+	<h1>Page de recherche d'un jeux vidéo par nom</h1>
+
+	<h:form>
+		<h3 style="margin-top: 0"></h3>
+		<fieldset>
+
+			<h:outputLabel for="name">Nom <span class="requis">:</span>
+			</h:outputLabel>
+			<br />
+			<h:inputText id="name" value="#{Saisie.nom}" type="text"
+				required="required" maxlength="20"
+				requiredMessage="La saisie du nom est obligatoire !" />
+			<h:message for="name" styleClass="errorBlock" />
+			<br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false" />
+			<h:commandButton value="recherche" action="#{Saisie.existe}"
+				styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false" />
+			<h:commandButton value="Retour menu" action="menu.xhtml"
+				styleClass="sansLabel" />
+			<br /> <br />
+
+			<h:messages globalOnly="true" infoClass="info" redisplay="false" />
+			<h:commandButton value="Remise à vide" action="#{Saisie.reset}"
+				styleClass="sansLabel" />
+		</fieldset>
+
+	</h:form>
+</h:body>
+
+</html>
